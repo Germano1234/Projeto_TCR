@@ -13,7 +13,7 @@ namespace Projeto_TCR.Repository
         public void adiciona(Agenda p)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -27,12 +27,12 @@ namespace Projeto_TCR.Repository
         public void altera(Agenda c)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao;
-            cmd.CommandText = $"Update Agenda set Tipo = '{c.Tipo}', Data = {c.Data_agenda}, Hora = '{c.Hora1}', Id_Ususario = {c.IdUsuario}, Id_Quadra = {c.IdQuadra} where Id_Agenda = {c.IdAgenda}";
+            cmd.CommandText = $"Update Agenda set Tipo = '{c.Tipo}', Data_Agenda = {c.Data_agenda}, Hora = '{c.Hora1}', Id_Ususario = {c.IdUsuario}, Id_Quadra = {c.IdQuadra} where Id_Agenda = {c.IdAgenda}";
             cmd.ExecuteNonQuery();
             conexao.Close();
         }
@@ -40,7 +40,7 @@ namespace Projeto_TCR.Repository
         public void exclui(Agenda c)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -53,7 +53,7 @@ namespace Projeto_TCR.Repository
         public IEnumerable<MostrarAgenda> Get(DateTime pesquisa, int NumQuadra)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -79,7 +79,7 @@ namespace Projeto_TCR.Repository
         public IEnumerable<Agenda> GetAll()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -106,7 +106,7 @@ namespace Projeto_TCR.Repository
         public IEnumerable<int> GetQuadra(DateTime d, string t)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -127,7 +127,7 @@ namespace Projeto_TCR.Repository
         public IEnumerable<int> GetQuadraPesquisa()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -148,7 +148,7 @@ namespace Projeto_TCR.Repository
         public Agenda GetId(int id)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
 

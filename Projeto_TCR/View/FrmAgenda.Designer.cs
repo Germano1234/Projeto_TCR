@@ -166,7 +166,7 @@
             this.cbQuadra.ItemHeight = 23;
             this.cbQuadra.Location = new System.Drawing.Point(112, 193);
             this.cbQuadra.Name = "cbQuadra";
-            this.cbQuadra.Size = new System.Drawing.Size(173, 29);
+            this.cbQuadra.Size = new System.Drawing.Size(113, 29);
             this.cbQuadra.TabIndex = 17;
             // 
             // BtnQuadras

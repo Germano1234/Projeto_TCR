@@ -19,6 +19,7 @@ namespace Projeto_TCR.View
         {
             InitializeComponent();
             lblData.Text = "";
+            lblNome.Text = "Renter's name";
         }
         Professor P = new Professor();
         RProfessor RP = new RProfessor();
@@ -62,6 +63,7 @@ namespace Projeto_TCR.View
             fa.ShowDialog();
             int codigo = fa.id;
             A = RA.GetId(codigo);
+            T = RT.GetId(A.IdUsuario);
             btnNovo.Enabled = true;
             BtnSalvar.Enabled = false;
             BtnCancelar.Enabled = false;   
@@ -69,8 +71,8 @@ namespace Projeto_TCR.View
             btnTenista.Enabled = false;
             BtnQuadras.Enabled = false;
             BtnExcluirT.Enabled = true;
-            lblData.Text = "Reservada dia: " + A.Data_agenda.ToShortDateString() + " as " + A.Hora1 + " na Quadra " + A.IdQuadra.ToString();
-            lblNome.Text = "Reservado por Usuario: " + A.IdUsuario.ToString(); 
+            lblData.Text = "Reservation: " + A.Data_agenda.ToShortDateString() + " at " + A.Hora1 + " on court " + A.IdQuadra.ToString();
+            lblNome.Text = "Reserved by: " + T.Name; 
         }
 
 
@@ -78,7 +80,7 @@ namespace Projeto_TCR.View
         {
             if (tipo == "Aula")
             {
-                A.Tipo = "Aula";
+                A.Tipo = "Class";
                 A.IdUsuario = P.IdTeacher;
                 A.Data_agenda = dtAgenda.Value;
                 A.Hora1 = cbHorario.Text;
@@ -87,12 +89,12 @@ namespace Projeto_TCR.View
                 if (status == "Inserindo")
                 {
                     RA.adiciona(A);
-                    MessageBox.Show("Registro incluído com sucesso!");
+                    MessageBox.Show("Event sucessfully registered!");
                 }
                 if (status == "Editando")
                 {
                     RA.altera(A);
-                    MessageBox.Show("Registro alterado com sucessso!");
+                    MessageBox.Show("Event's info sucessfully changed!");
                 }
                 LimpaControle();
                 status = "Navegando";
@@ -105,7 +107,7 @@ namespace Projeto_TCR.View
             }
             if (tipo == "Jogo")
             {
-                A.Tipo = "Jogo";
+                A.Tipo = "Game";
                 A.IdUsuario = T.IdPlayer;
                 A.Data_agenda = dtAgenda.Value;
                 A.Hora1 = cbHorario.Text;
@@ -114,12 +116,12 @@ namespace Projeto_TCR.View
                 if (status == "Inserindo")
                 {
                     RA.adiciona(A);
-                    MessageBox.Show("Registro incluído com sucesso!");
+                    MessageBox.Show("Event sucessfully registered!");
                 }
                 if (status == "Editando")
                 {
                     RA.altera(A);
-                    MessageBox.Show("Registro alterado com sucessso!");
+                    MessageBox.Show("Event's info sucessfully changed!");
                 }
                 LimpaControle();
                 status = "Navegando";
@@ -135,10 +137,10 @@ namespace Projeto_TCR.View
 
         private void BtnExcluirT_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Deseja excluir?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
+            if (DialogResult.Yes == MessageBox.Show("Are you sure?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
             {
                 RA.exclui(A);
-                MessageBox.Show("Excluido com sucesso!");
+                MessageBox.Show("The event was deleted!");
                 LimpaControle();
                 status = "Navegando";
                 HabilitaControle();
@@ -154,7 +156,7 @@ namespace Projeto_TCR.View
             BtnQuadras.Enabled = true;
             btnProfessor.Enabled = true;
             BtnCancelar.Enabled = true;
-            lblNome.Text = "Locador da Quadra";
+            lblNome.Text = "Renter's name";
         }
     }
 }

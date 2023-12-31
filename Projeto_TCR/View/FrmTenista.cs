@@ -46,12 +46,12 @@ namespace Projeto_TCR
             if(status == "Inserindo")
             {
                 RT.adiciona(T);
-                MessageBox.Show("Registro incluído com sucesso!");
+                MessageBox.Show("Player registered!");
             }
             if(status == "Editando")
             {
                 RT.altera(T);
-                MessageBox.Show("Registro alterado com sucessso!");
+                MessageBox.Show("Player's info was changed!");
             }
             LimpaControle();
             status = "Navegando";
@@ -60,10 +60,10 @@ namespace Projeto_TCR
 
         private void BtnExcluirT_Click(object sender, EventArgs e)
         {
-            if(DialogResult.Yes == MessageBox.Show("Deseja excluir?","Alerta",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation))
+            if(DialogResult.Yes == MessageBox.Show("Are you sure?","Warning",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation))
             {
                 RT.exclui(T);
-                MessageBox.Show("Excluido com sucesso!");
+                MessageBox.Show("Player deleted!");
                 LimpaControle();
                 status = "Navegando";
                 HabilitaControle();

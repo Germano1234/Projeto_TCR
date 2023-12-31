@@ -13,7 +13,7 @@ namespace Projeto_TCR.Repository
         public void adiciona(Tenista c)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -27,7 +27,7 @@ namespace Projeto_TCR.Repository
         public void altera(Tenista c)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -40,7 +40,7 @@ namespace Projeto_TCR.Repository
         public void exclui(Tenista c)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -53,7 +53,7 @@ namespace Projeto_TCR.Repository
         public IEnumerable<Tenista> Get(string pesquisa)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -79,7 +79,7 @@ namespace Projeto_TCR.Repository
         public IEnumerable<Tenista> GetAll()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -104,7 +104,7 @@ namespace Projeto_TCR.Repository
         public Tenista GetId(int id)
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = "Server=DESKTOP-JIEU0N4\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
+            conexao.ConnectionString = Program.stringConexao;
             conexao.Open();
 
 

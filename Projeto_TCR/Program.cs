@@ -18,5 +18,6 @@ namespace Projeto_TCR
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmPrincipal());
         }
+        public static String stringConexao = "Server=.\\SQLEXPRESS;Database=AgendaTCR;UID=sa;PWD=123";
     }
 }

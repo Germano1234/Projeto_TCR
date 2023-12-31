@@ -35,11 +35,11 @@
             this.professorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quadraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,21 +72,21 @@
             // tenistaToolStripMenuItem
             // 
             this.tenistaToolStripMenuItem.Name = "tenistaToolStripMenuItem";
-            this.tenistaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tenistaToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.tenistaToolStripMenuItem.Text = "Player";
             this.tenistaToolStripMenuItem.Click += new System.EventHandler(this.tenistaToolStripMenuItem_Click);
             // 
             // professorToolStripMenuItem
             // 
             this.professorToolStripMenuItem.Name = "professorToolStripMenuItem";
-            this.professorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.professorToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.professorToolStripMenuItem.Text = "Teacher";
             this.professorToolStripMenuItem.Click += new System.EventHandler(this.professorToolStripMenuItem_Click);
             // 
             // quadraToolStripMenuItem
             // 
             this.quadraToolStripMenuItem.Name = "quadraToolStripMenuItem";
-            this.quadraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quadraToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.quadraToolStripMenuItem.Text = "Court";
             this.quadraToolStripMenuItem.Click += new System.EventHandler(this.quadraToolStripMenuItem_Click);
             // 
@@ -97,6 +97,13 @@
             this.agendaToolStripMenuItem.Text = "Schedule";
             this.agendaToolStripMenuItem.Click += new System.EventHandler(this.agendaToolStripMenuItem_Click);
             // 
+            // agendaToolStripMenuItem1
+            // 
+            this.agendaToolStripMenuItem1.Name = "agendaToolStripMenuItem1";
+            this.agendaToolStripMenuItem1.Size = new System.Drawing.Size(60, 20);
+            this.agendaToolStripMenuItem1.Text = "Agenda";
+            this.agendaToolStripMenuItem1.Click += new System.EventHandler(this.agendaToolStripMenuItem1_Click);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
@@ -104,36 +111,29 @@
             this.sairToolStripMenuItem.Text = "Exit";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(151, 133);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(371, 332);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(575, 117);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(597, 495);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
             // pToolStripMenuItem
             // 
             this.pToolStripMenuItem.Name = "pToolStripMenuItem";
             this.pToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             this.pToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical270;
             // 
-            // agendaToolStripMenuItem1
+            // pictureBox1
             // 
-            this.agendaToolStripMenuItem1.Name = "agendaToolStripMenuItem1";
-            this.agendaToolStripMenuItem1.Size = new System.Drawing.Size(60, 20);
-            this.agendaToolStripMenuItem1.Text = "Agenda";
-            this.agendaToolStripMenuItem1.Click += new System.EventHandler(this.agendaToolStripMenuItem1_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(91, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(407, 644);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(639, 211);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(527, 473);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmPrincipal
             // 
