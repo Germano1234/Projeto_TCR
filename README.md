@@ -8,7 +8,11 @@ The Tennis Court Reservation software is designed to help tennis academies and t
 Features
 
 Court Availability Management: Keep track of which courts are available or occupied at any time.
+
 Match Scheduling: Schedule and organize tennis matches easily.
+
 Class Management: Allocate courts for tennis classes without conflict.
+
 User-Friendly Interface: Intuitive design for easy navigation and usage.
+
 Conflict Resolution: Automatically checks for scheduling conflicts to prevent double bookings.
