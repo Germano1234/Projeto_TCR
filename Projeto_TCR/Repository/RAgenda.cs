@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Projeto_TCR.Repository
 {
-    internal class RAgenda
+    internal class RAgenda: IAgenda
     {
         public void adiciona(Agenda p)
         {

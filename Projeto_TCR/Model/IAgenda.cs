@@ -12,8 +12,9 @@ namespace Projeto_TCR.Model
         void altera(Agenda c);
         void exclui(Agenda c);
         Agenda GetId(int id);
+        IEnumerable<MostrarAgenda> Get(DateTime pesquisa, int NumQuadra);
         IEnumerable<Agenda> GetAll();
-        IEnumerable<Agenda> Get(string pesquisa);
+        IEnumerable<int> GetQuadraPesquisa();
         IEnumerable<int> GetQuadra(DateTime d, string t);
     }
 }
